@@ -8,10 +8,10 @@ function Axis() {
 
   useEffect(() => {
     d3.select(".x-axis")
-      .attr("transform", `translate(${margin}, ${height})`)
+      .attr("transform", `translate(${margin}, ${height + margin / 2.5})`)
       .call(d3.axisBottom(x));
     d3.select(".y-axis")
-      .attr("transform", `translate(${margin}, 0)`)
+      .attr("transform", `translate(${margin}, ${margin / 2.5})`)
       .call(d3.axisLeft(y).ticks(10));
   }, []);
 

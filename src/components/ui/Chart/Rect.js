@@ -14,19 +14,17 @@ function Rect({ fill, d }) {
     <>
       <rect
         x={location(d).x + margin}
-        y={location(d).y}
+        y={location(d).y + margin / 2.5}
         height={height - location(d).y}
         width={width / 10}
         fill={color(["white", "blue"])(d)}
       />
-      <rect
+      <text
         x={location(d).x + width / 10 / 2 + margin}
-        y={location(d).y}
-        height={10}
-        width={10}
-        fill={color(["white", "red"])(d)}
-        opacity="0.5"
-      />
+        y={location(d).y + margin / 2.5}
+      >
+        {d}
+      </text>
     </>
   );
 }
