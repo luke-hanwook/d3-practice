@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import { Link, Route, Switch } from "react-router-dom";
-import { Home, Rect, Line, Area, Scatter } from "./pages";
+import { HomePage, RectPage, LinePage, AreaPage, ScatterPage } from "./pages";
 
 export default function App() {
   return (
@@ -25,11 +25,11 @@ export default function App() {
         </li>
       </ul>
       <Switch>
-        <Route path="/rect" component={Rect} />
-        <Route path="/line" component={Line} />
-        <Route path="/area" component={Area} />
-        <Route path="/scatter" component={Scatter} />
-        <Route path="/" component={Home} />
+        <Route path="/rect" component={RectPage} />
+        <Route path="/line" component={LinePage} />
+        <Route path="/area" component={AreaPage} />
+        <Route path="/scatter" component={ScatterPage} />
+        <Route path="/" component={HomePage} />
       </Switch>
     </div>
   );

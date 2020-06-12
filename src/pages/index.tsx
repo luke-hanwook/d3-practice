@@ -1,5 +1,5 @@
-export { default as Home } from "./Home";
-export { default as Rect } from "./Rect";
-export { default as Line } from "./Line";
-export { default as Area } from "./Area";
-export { default as Scatter } from "./Scatter";
+export { default as HomePage } from "./HomePage";
+export { default as RectPage } from "./RectPage";
+export { default as LinePage } from "./LinePage";
+export { default as AreaPage } from "./AreaPage";
+export { default as ScatterPage } from "./ScatterPage";

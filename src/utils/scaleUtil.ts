@@ -42,7 +42,10 @@ type ScaleTypes =
 export const getScale = (scale: ScaleTypes) => {
   switch (scale.type) {
     case SCALE_BAND: {
-      return d3[scale.type]().domain(scale.domain).range(scale.range);
+      return d3[scale.type]()
+        .domain(scale.domain)
+        .range(scale.range)
+        .padding(0.3);
     }
     case SCALE_LINEAR: {
       return d3[scale.type]()

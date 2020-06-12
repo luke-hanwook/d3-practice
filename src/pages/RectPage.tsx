@@ -7,7 +7,7 @@ import AreaModel from "../model/AreaModel";
 import { getScale, loadScaleBand, loadScaleLinear } from "../utils/scaleUtil";
 import { RectChart } from "../components/graphs";
 
-function Rect() {
+function RectPage() {
   const data = useData();
 
   const area = new AreaModel(
@@ -49,18 +49,22 @@ function Rect() {
   return (
     <>
       <h3>Rect</h3>
-      <Chart figure={area.getWrapperFigure()}>
-        <g transform={area.getTransFormWrapper()}>
-          <RectChart
-            data={data}
-            orientation="vertical"
-            scale={{ x: xAxis, y: yAxis }}
-          />
-        </g>
-        <Axes axes={axes} />
-      </Chart>
+      {data.length > 0 ? (
+        <Chart figure={area.getWrapperFigure()}>
+          <g transform={area.getTransFormWrapper()}>
+            <RectChart
+              data={data}
+              orientation="vertical"
+              scale={{ x: xAxis, y: yAxis }}
+            />
+          </g>
+          <Axes axes={axes} />
+        </Chart>
+      ) : (
+        "Loading..."
+      )}
     </>
   );
 }
 
-export default Rect;
+export default RectPage;
